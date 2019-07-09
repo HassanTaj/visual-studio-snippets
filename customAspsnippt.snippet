@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+
+
+  <!-- _____________________________________________ General Function Snippits _________________________________________ -->
+  <!-- default function snippit -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Default Function</Title>
+      <Shortcut>df</Shortcut>
+      <Description>Code snippet for default function</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessor</ID>
+          <ToolTip>Access level of the method</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of the function</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>argType</ID>
+          <ToolTip>Type of the argument</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>argName</ID>
+          <ToolTip>Name of the argument</ToolTip>
+          <Default>argName</Default>
+        </Literal>
+        <Literal>
+          <ID>funcName</ID>
+          <ToolTip>Name of the function</ToolTip>
+          <Default>GeneralMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessor$ $retType$ $funcName$($argType$ $argName$) {
+	    	$selected$ $end$
+	     }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- default perameterless function snippit -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Default Perameterless Function</Title>
+      <Shortcut>dpf</Shortcut>
+      <Description>Code snippet for default perameterless function</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessor</ID>
+          <ToolTip>Access level of the method</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of the function</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>funcName</ID>
+          <ToolTip>Name of the function</ToolTip>
+          <Default>GeneralMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessor$ $retType$ $funcName$() {
+	    	$selected$ $end$
+	     }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- expression bodied function snippit -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Expression Bodied Function</Title>
+      <Shortcut>ebf</Shortcut>
+      <Description>Code snippet for expression bodied function</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessor</ID>
+          <ToolTip>Access level of the method</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of the function</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>argType</ID>
+          <ToolTip>Type of the argument</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>argName</ID>
+          <ToolTip>Name of the argument</ToolTip>
+          <Default>argName</Default>
+        </Literal>
+        <Literal>
+          <ID>funcName</ID>
+          <ToolTip>Name of the function</ToolTip>
+          <Default>Method</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessor$ $retType$ $funcName$($argType$ $argName$) => $selected$ $end$ ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- expression bodied perameterless function snippit -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Expression bodied parameterless function</Title>
+      <Shortcut>ebpf</Shortcut>
+      <Description>Code snippet for general method</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessor</ID>
+          <ToolTip>Access level of the method</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of the function</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>funcName</ID>
+          <ToolTip>Name of the function</ToolTip>
+          <Default>GeneralMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessor$ $retType$ $funcName$() => $selected$ $end$ ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Constructor with Dependency Injection -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>ctord</Title>
+      <Shortcut>ctord</Shortcut>
+      <Description>Code snippet for constructor with Dependency Injection Support</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>classname</ID>
+          <ToolTip>Class name</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>ClassNamePlaceholder</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Replace with the type of injected dependency</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>typevarname</ID>
+          <ToolTip>Replace with the name of the variable</ToolTip>
+          <Default>injectedDependency</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[private $type$ _$typevarname$;
+        public $classname$ ($type$ $typevarname$)
+	{
+		_$typevarname$=$typevarname$;$end$
+	}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Static class-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>static class</Title>
+      <Shortcut>sclass</Shortcut>
+      <Description>Code snippet for static class</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>MyClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[static class $name$
+	{
+		$selected$$end$
+	}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- __________________________________________ General Function Snippits End _______________________________________ -->
+
+
+  <!-- _____________________________________________ Static Function Snippits _________________________________________ -->
+  <!-- static default function snippit -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Static Default Function</Title>
+      <Shortcut>sdf</Shortcut>
+      <Description>Code snippet for static default function</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessor</ID>
+          <ToolTip>Access level of the method</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of the function</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>argType</ID>
+          <ToolTip>Type of the argument</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>argName</ID>
+          <ToolTip>Name of the argument</ToolTip>
+          <Default>argName</Default>
+        </Literal>
+        <Literal>
+          <ID>funcName</ID>
+          <ToolTip>Name of the function</ToolTip>
+          <Default>GeneralMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessor$ static $retType$ $funcName$($argType$ $argName$) {
+	    	$selected$ $end$
+	     }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- static default perameterless function snippit -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Static Default Perameterless Function</Title>
+      <Shortcut>sdpf</Shortcut>
+      <Description>Code snippet for static default perameterless function</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessor</ID>
+          <ToolTip>Access level of the method</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of the function</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>funcName</ID>
+          <ToolTip>Name of the function</ToolTip>
+          <Default>GeneralMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessor$ static $retType$ $funcName$() {
+	    	$selected$ $end$
+	     }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- static expression bodied function snippit -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Static Expression Bodied Function</Title>
+      <Shortcut>sebf</Shortcut>
+      <Description>Code snippet for static expression bodied function</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessor</ID>
+          <ToolTip>Access level of the method</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of the function</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>argType</ID>
+          <ToolTip>Type of the argument</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>argName</ID>
+          <ToolTip>Name of the argument</ToolTip>
+          <Default>argName</Default>
+        </Literal>
+        <Literal>
+          <ID>funcName</ID>
+          <ToolTip>Name of the function</ToolTip>
+          <Default>Method</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessor$ static $retType$ $funcName$($argType$ $argName$) => $selected$ $end$ ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- static expression bodied perameterless function snippit -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Static Expression bodied parameterless static function</Title>
+      <Shortcut>sebpf</Shortcut>
+      <Description>Code snippet for static expression bodied function</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessor</ID>
+          <ToolTip>Access level of the method</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of the function</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>funcName</ID>
+          <ToolTip>Name of the function</ToolTip>
+          <Default>GeneralMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessor$ static $retType$ $funcName$() => $selected$ $end$ ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- __________________________________________ Static Function Snippits End _______________________________________ -->
+
+
+
+  <!-- _____________________________________________ Console Helper Snippets _________________________________________ -->
+
+  <!-- Console Read-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>console read</Title>
+      <Shortcut>cr</Shortcut>
+      <Description>Code snippet for Console.Read()</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Code Language="csharp">
+        <![CDATA[Console.Read();$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Console Read Key-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>console read key</Title>
+      <Shortcut>crk</Shortcut>
+      <Description>Code snippet for Console.ReadKey()</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Code Language="csharp">
+        <![CDATA[Console.ReadKey();$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Console Read Line-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>console read line</Title>
+      <Shortcut>crl</Shortcut>
+      <Description>Code snippet for Console.ReadLine()</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of variable</ToolTip>
+          <Default>var</Default>
+        </Literal>
+        <Literal>
+          <ID>varName</ID>
+          <ToolTip>Name of variable</ToolTip>
+          <Default>variable</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[ $retType$ $varName$ = Console.ReadLine();$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- ___________________________________________ Console Helper Snippets  End ______________________________________ -->
+
+  <!-- _____________________________________________ Mvc Helper Snippets _________________________________________ -->
+
+  <!-- Mvc 5 Action   -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>mvcaction5</Title>
+      <Shortcut>mvcaction5</Shortcut>
+      <Description>Code snippet for an mvc5 action.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Mvc</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>Action</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public IActionResult $name$()
+      {
+          return View();$end$
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- Mvc 5 Post Action   -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>mvcpostaction5</Title>
+      <Shortcut>mvcpostaction5</Shortcut>
+      <Description>Code snippet for an mvc5 action via http post.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Mvc</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>Action</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpPost]
+	  public IActionResult $name$()
+      {
+          return View();$end$
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Mvc 5 Action Pair -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>actions5</Title>
+      <Shortcut>actions5</Shortcut>
+      <Description>Code snippet for an mvc5 action pair.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Http</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Mvc</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>Action</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Replace with the type</ToolTip>
+          <Default>IFormCollection</Default>
+        </Literal>
+        <Literal>
+          <ID>typevar</ID>
+          <ToolTip>Replace with variable name</ToolTip>
+          <Default>col</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public IActionResult $name$()
+      {
+          return View(); $selected$  $end$
+      }
+      
+      [HttpPost]
+	    public IActionResult $name$($type$ $typevar$)
+      {
+          return View();
+      }
+      ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Mvc 4 Action Pair -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>actions4</Title>
+      <Shortcut>actions4</Shortcut>
+      <Description>Code snippet for an mvc4 action pair.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Web.Mvc</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly>System.Web.Mvc.dll</Assembly>
+        </Reference>
+      </References>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>MAction</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Replace with the type</ToolTip>
+          <Default>FormCollection</Default>
+        </Literal>
+        <Literal>
+          <ID>typevar</ID>
+          <ToolTip>Replace with variable name</ToolTip>
+          <Default>col</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+      [HttpGet]
+      public ActionResult $name$()
+      {
+          return View();
+      }
+      [HttpPost]
+	    public ActionResult $name$($type$ $typevar$)
+      {
+          return View();$end$
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- _____________________________________________ Mvc Helper Snippets End _________________________________________ -->
+
+  <!-- _____________________________________________ async Mvc Helper Snippets Start _________________________________________ -->
+
+  <!-- Mvc 5 Action   -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>mvcaction5async</Title>
+      <Shortcut>mvcaction5async</Shortcut>
+      <Description>Code snippet for an mvc5 action.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Mvc</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>Action</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpGet]
+      public async Task<IActionResult> $name$()
+      {
+          return View();$end$
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Mvc 5 async Post Action   -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>mvcpostaction5async</Title>
+      <Shortcut>mvcpostaction5async</Shortcut>
+      <Description>Code snippet for an mvc5 action via http post.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Mvc</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>Action</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Replace with the type</ToolTip>
+          <Default>FormCollection</Default>
+        </Literal>
+        <Literal>
+          <ID>typevar</ID>
+          <ToolTip>Replace with variable name</ToolTip>
+          <Default>col</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpPost]
+      public async Task<IActionResult> $name$($type$ $typevar$)
+      {
+          return View();$end$
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Mvc 5 async Action Pair -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>actions5async</Title>
+      <Shortcut>actions5async</Shortcut>
+      <Description>Code snippet for an mvc5 async action pair.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Http</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Mvc</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>MAction</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Replace with the type</ToolTip>
+          <Default>IFormCollection</Default>
+        </Literal>
+        <Literal>
+          <ID>typevar</ID>
+          <ToolTip>Replace with variable name</ToolTip>
+          <Default>col</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpGet]
+      public async Task<IActionResult> $name$()
+      {
+          return View();$end$
+      }
+      
+      [HttpPost]
+	    public async Task<IActionResult> $name$($type$ $typevar$)
+      {
+          return View();
+      }
+      ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Mvc 4 async Action Pair -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>actions4async</Title>
+      <Shortcut>actions4async</Shortcut>
+      <Description>Code snippet for an mvc4 async action pair.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Web.Mvc</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly>System.Web.Mvc.dll</Assembly>
+        </Reference>
+      </References>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>MAction</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Replace with the type</ToolTip>
+          <Default>FormCollection</Default>
+        </Literal>
+        <Literal>
+          <ID>typevar</ID>
+          <ToolTip>Replace with variable name</ToolTip>
+          <Default>col</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpGet]
+      public async Task<ActionResult> $name$()
+      {
+          return View();
+      }
+      [HttpPost]
+	    public async Task<ActionResult> $name$($type$ $typevar$)
+      {
+          return View();$end$
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- _____________________________________________ async Mvc Helper Snippets End _________________________________________ -->
+
+  <!-- _____________________________________________ custom props Start _________________________________________ -->
+  
+  <!-- Static auto prop -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>props</Title>
+      <Shortcut>props</Shortcut>
+      <Description>Code snippet for an static automatically implemented property</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public static $type$ $property$ { get; set; }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- Constant auto prop -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>propc</Title>
+      <Shortcut>propc</Shortcut>
+      <Description>Code snippet for an constant automatically implemented property</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public const $type$ $property$ { get; set; }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- readonly auto property-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>propr</Title>
+      <Shortcut>propr</Shortcut>
+      <Description>Code snippet for an constant automatically implemented property</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public readonly $type$ $property$ { get; set; }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- _____________________________________________ custom props End _________________________________________ -->
+
+</CodeSnippets>
