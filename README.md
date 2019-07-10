@@ -1,9 +1,9 @@
 # Installation
-1. Open Visual Studio
-2. Press Ctrl + K, Ctrl + B
-3. Import Snippits
-4. Add & save
-
+1. Download the snippets file.
+2. Open Visual Studio
+3. Press Ctrl + K, Ctrl + B
+4. Import Snippits
+5. Add & save
 ----------------------------
 # MVC Helping Shortcuts
 mvcaction4<br />
