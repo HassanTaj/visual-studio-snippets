@@ -1,14 +1,11 @@
-#Installation
+# Installation
 1. Open Visual Studio
 2. Press Ctrl + K, Ctrl + B
 3. Import Snippits
 4. Add & save
 
 ----------------------------
-
-# Asp.NET snippets
-
--- MVC Helping Shortcuts
+# -- MVC Helping Shortcuts
 mvcaction4
 mvcactionpost4
 
@@ -18,47 +15,47 @@ mvcactionpost5
 mvcaction5async
 mvcactionpost5async
 
--- Action Pairs
+# -- Action Pairs
+
 actions4
 actions5
 
 actions4async
 actions5async
 
-
--- Property shortcuts
+# -- Property shortcuts
 
 propc // constant property
 props // static property
 propr // readonly property
 
--- Function shortcuts
+# -- Function shortcuts
 
 df
 dpf
 
--- static functions 
+# -- static functions 
 
 sdf
 sdpf
 
--- expression bodied functions
+# -- expression bodied functions
 
 ebf
 ebpf
 
--- static  expression bodied functions
+# -- static  expression bodied functions
 
 sebf
 sebpf
 
--- constructor & class shortcuts
+# -- constructor & class shortcuts
 
 ctord // for dependency injection in constructor
 sclass // static class
 
 
--- console shippits
+# -- console shippets
 
 cr // console read
 crk // console read key
