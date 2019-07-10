@@ -443,6 +443,90 @@
   <!-- ___________________________________________ Console Helper Snippets  End ______________________________________ -->
 
   <!-- _____________________________________________ Mvc Helper Snippets _________________________________________ -->
+  <!-- Mvc 4 Action   -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>mvcaction4</Title>
+      <Shortcut>mvcaction4</Shortcut>
+      <Description>Code snippet for an mvc4 action.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Web.Mvc</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly>System.Web.Mvc.dll</Assembly>
+        </Reference>
+      </References>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>Action</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpGet]
+      public ActionResult $name$() {
+          return View();$end$
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- Mvc 4 Post Action   -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>mvcpostaction4</Title>
+      <Shortcut>mvcpostaction4</Shortcut>
+      <Description>Code snippet for an mvc5 action via http post.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Web.Mvc</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly>System.Web.Mvc.dll</Assembly>
+        </Reference>
+      </References>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>Action</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Replace with the type</ToolTip>
+          <Default>FormCollection</Default>
+        </Literal>
+        <Literal>
+          <ID>typevar</ID>
+          <ToolTip>Replace with variable name</ToolTip>
+          <Default>col</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpPost]
+	  public ActionResult $name$($type$ $typevar$) {
+          return View();$end$
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
 
   <!-- Mvc 5 Action   -->
   <CodeSnippet Format="1.0.0">
@@ -621,7 +705,7 @@
 
   <!-- _____________________________________________ async Mvc Helper Snippets Start _________________________________________ -->
 
-  <!-- Mvc 5 Action   -->
+  <!-- Mvc 5 Action Async  -->
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>mvcaction5async</Title>
@@ -655,7 +739,7 @@
     </Snippet>
   </CodeSnippet>
 
-  <!-- Mvc 5 async Post Action   -->
+  <!-- Mvc 5 async Post Action  async  -->
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>mvcpostaction5async</Title>
@@ -815,7 +899,7 @@
   <!-- _____________________________________________ async Mvc Helper Snippets End _________________________________________ -->
 
   <!-- _____________________________________________ custom props Start _________________________________________ -->
-  
+
   <!-- Static auto prop -->
   <CodeSnippet Format="1.0.0">
     <Header>
