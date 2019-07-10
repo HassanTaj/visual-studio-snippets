@@ -5,58 +5,58 @@
 4. Add & save
 
 ----------------------------
-# -- MVC Helping Shortcuts
-mvcaction4
-mvcactionpost4
+# MVC Helping Shortcuts
+mvcaction4<br />
+mvcactionpost4<br />
 
-mvcaction5
-mvcactionpost5
+mvcaction5<br />
+mvcactionpost5<br />
 
-mvcaction5async
-mvcactionpost5async
+mvcaction5async<br />
+mvcactionpost5async<br />
 
-# -- Action Pairs
+# Action Pairs
 
-actions4
-actions5
+actions4<br />
+actions5<br />
 
-actions4async
-actions5async
+actions4async<br />
+actions5async<br />
 
-# -- Property shortcuts
+# Property shortcuts
 
-propc // constant property
-props // static property
-propr // readonly property
+propc // constant property<br />
+props // static property<br />
+propr // readonly property<br />
 
-# -- Function shortcuts
+# Function shortcuts
 
-df
-dpf
+df // default function<br />
+dpf // default function with a param<br />
 
-# -- static functions 
+# Static functions 
 
-sdf
-sdpf
+sdf <br />
+sdpf<br />
 
-# -- expression bodied functions
+# Expression bodied functions
 
-ebf
-ebpf
+ebf<br />
+ebpf<br />
 
-# -- static  expression bodied functions
+# Static  expression bodied functions
 
-sebf
-sebpf
+sebf<br />
+sebpf<br />
 
-# -- constructor & class shortcuts
+# Constructor & class shortcuts
 
-ctord // for dependency injection in constructor
-sclass // static class
+ctord // for dependency injection in constructor<br />
+sclass // static class<br />
 
 
-# -- console shippets
+# Console shippets
 
-cr // console read
-crk // console read key
-crl // console read line
+cr // console read<br />
+crk // console read key<br />
+crl // console read line<br />
