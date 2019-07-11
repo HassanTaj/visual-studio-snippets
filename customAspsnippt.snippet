@@ -187,10 +187,9 @@
       </Declarations>
       <Code Language="csharp">
         <![CDATA[private $type$ _$typevarname$;
-        public $classname$ ($type$ $typevarname$)
-	{
-		_$typevarname$=$typevarname$;$end$
-	}]]>
+        public $classname$ ($type$ $typevarname$) {
+        _$typevarname$=$typevarname$;$end$
+        }]]>
       </Code>
     </Snippet>
   </CodeSnippet>
@@ -216,8 +215,7 @@
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[static class $name$
-	{
+        <![CDATA[static class $name$ {
 		$selected$$end$
 	}]]>
       </Code>
@@ -521,7 +519,7 @@
       </Declarations>
       <Code Language="csharp">
         <![CDATA[[HttpPost]
-	  public ActionResult $name$($type$ $typevar$) {
+        public ActionResult $name$($type$ $typevar$) {
           return View();$end$
       }]]>
       </Code>
@@ -553,8 +551,8 @@
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[public IActionResult $name$()
-      {
+        <![CDATA[[HttpGet]
+        public IActionResult $name$() {
           return View();$end$
       }]]>
       </Code>
@@ -583,11 +581,20 @@
           <ToolTip>Replace with the name of the action</ToolTip>
           <Default>Action</Default>
         </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Replace with the type</ToolTip>
+          <Default>FormCollection</Default>
+        </Literal>
+        <Literal>
+          <ID>typevar</ID>
+          <ToolTip>Replace with variable name</ToolTip>
+          <Default>col</Default>
+        </Literal>
       </Declarations>
       <Code Language="csharp">
         <![CDATA[[HttpPost]
-	  public IActionResult $name$()
-      {
+      public IActionResult $name$($type$ $typevar$) {
           return View();$end$
       }]]>
       </Code>
@@ -632,14 +639,12 @@
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[public IActionResult $name$()
-      {
+        <![CDATA[public IActionResult $name$() {
           return View(); $selected$  $end$
       }
       
       [HttpPost]
-	    public IActionResult $name$($type$ $typevar$)
-      {
+	    public IActionResult $name$($type$ $typevar$) {
           return View();
       }
       ]]>
@@ -689,13 +694,11 @@
       <Code Language="csharp">
         <![CDATA[
       [HttpGet]
-      public ActionResult $name$()
-      {
+      public ActionResult $name$() {
           return View();
       }
       [HttpPost]
-	    public ActionResult $name$($type$ $typevar$)
-      {
+	    public ActionResult $name$($type$ $typevar$) {
           return View();$end$
       }]]>
       </Code>
@@ -731,8 +734,7 @@
       </Declarations>
       <Code Language="csharp">
         <![CDATA[[HttpGet]
-      public async Task<IActionResult> $name$()
-      {
+      public async Task<IActionResult> $name$() {
           return View();$end$
       }]]>
       </Code>
@@ -775,8 +777,7 @@
       </Declarations>
       <Code Language="csharp">
         <![CDATA[[HttpPost]
-      public async Task<IActionResult> $name$($type$ $typevar$)
-      {
+      public async Task<IActionResult> $name$($type$ $typevar$) {
           return View();$end$
       }]]>
       </Code>
@@ -825,14 +826,12 @@
       </Declarations>
       <Code Language="csharp">
         <![CDATA[[HttpGet]
-      public async Task<IActionResult> $name$()
-      {
+      public async Task<IActionResult> $name$() {
           return View();$end$
       }
       
       [HttpPost]
-	    public async Task<IActionResult> $name$($type$ $typevar$)
-      {
+	    public async Task<IActionResult> $name$($type$ $typevar$) {
           return View();
       }
       ]]>
@@ -884,13 +883,11 @@
       </Declarations>
       <Code Language="csharp">
         <![CDATA[[HttpGet]
-      public async Task<ActionResult> $name$()
-      {
+      public async Task<ActionResult> $name$() {
           return View();
       }
       [HttpPost]
-	    public async Task<ActionResult> $name$($type$ $typevar$)
-      {
+	    public async Task<ActionResult> $name$($type$ $typevar$) {
           return View();$end$
       }]]>
       </Code>
