@@ -584,7 +584,7 @@
         <Literal>
           <ID>type</ID>
           <ToolTip>Replace with the type</ToolTip>
-          <Default>FormCollection</Default>
+          <Default>IFormCollection</Default>
         </Literal>
         <Literal>
           <ID>typevar</ID>
@@ -767,7 +767,7 @@
         <Literal>
           <ID>type</ID>
           <ToolTip>Replace with the type</ToolTip>
-          <Default>FormCollection</Default>
+          <Default>IFormCollection</Default>
         </Literal>
         <Literal>
           <ID>typevar</ID>
@@ -894,6 +894,85 @@
     </Snippet>
   </CodeSnippet>
   <!-- _____________________________________________ async Mvc Helper Snippets End _________________________________________ -->
+
+  <!-- _____________________________________________ WebApi asp.net core Helper Snippets _________________________________________ -->
+
+  <!-- api 5 Action -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>apiaction5</Title>
+      <Shortcut>apiaction5</Shortcut>
+      <Description>Code snippet for an .net core api action.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Mvc</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>Action</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpGet]
+        public IActionResult $name$() {
+          return Ok();$end$
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- api 5 Post Action  -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>apipostaction5</Title>
+      <Shortcut>apipostaction5</Shortcut>
+      <Description>Code snippet for an .net core post  action via http post.</Description>
+      <Author>Lee Haisen</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Mvc</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>Action</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Replace with the type</ToolTip>
+          <Default>IFormCollection</Default>
+        </Literal>
+        <Literal>
+          <ID>typevar</ID>
+          <ToolTip>Replace with variable name</ToolTip>
+          <Default>col</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpPost]
+      public IActionResult $name$($type$ $typevar$) {
+          return Ok();$end$
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- _____________________________________________ WebApi asp.net core Helper Snippets End _________________________________________ -->
 
   <!-- _____________________________________________ custom props Start _________________________________________ -->
 
