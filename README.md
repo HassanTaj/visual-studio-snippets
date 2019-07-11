@@ -15,6 +15,10 @@ mvcactionpost5<br />
 mvcaction5async<br />
 mvcactionpost5async<br />
 
+# Web Api Snippets
+ apiaction5<br />
+ apipostaction5<br />
+
 # Action Pairs
 
 actions4<br />
@@ -22,6 +26,8 @@ actions5<br />
 
 actions4async<br />
 actions5async<br />
+
+
 
 # Property shortcuts
 
