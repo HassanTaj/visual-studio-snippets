@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 
 
-  <!-- _____________________________________________ General Function Snippits _________________________________________ -->
+  <!-- _____________________________________________ General Function Snippits
+  _________________________________________ -->
   <!-- default function snippit -->
   <CodeSnippet Format="1.0.0">
     <Header>
@@ -221,10 +222,12 @@
       </Code>
     </Snippet>
   </CodeSnippet>
-  <!-- __________________________________________ General Function Snippits End _______________________________________ -->
+  <!-- __________________________________________ General Function Snippits End
+  _______________________________________ -->
 
 
-  <!-- _____________________________________________ Static Function Snippits _________________________________________ -->
+  <!-- _____________________________________________ Static Function Snippits
+  _________________________________________ -->
   <!-- static default function snippit -->
   <CodeSnippet Format="1.0.0">
     <Header>
@@ -376,11 +379,12 @@
       </Code>
     </Snippet>
   </CodeSnippet>
-  <!-- __________________________________________ Static Function Snippits End _______________________________________ -->
+  <!-- __________________________________________ Static Function Snippits End
+  _______________________________________ -->
 
 
-
-  <!-- _____________________________________________ Console Helper Snippets _________________________________________ -->
+  <!-- _____________________________________________ Console Helper Snippets
+  _________________________________________ -->
 
   <!-- Console Read-->
   <CodeSnippet Format="1.0.0">
@@ -438,9 +442,11 @@
       </Code>
     </Snippet>
   </CodeSnippet>
-  <!-- ___________________________________________ Console Helper Snippets  End ______________________________________ -->
+  <!-- ___________________________________________ Console Helper Snippets  End
+  ______________________________________ -->
 
-  <!-- _____________________________________________ Mvc Helper Snippets _________________________________________ -->
+  <!-- _____________________________________________ Mvc Helper Snippets
+  _________________________________________ -->
   <!-- Mvc 4 Action   -->
   <CodeSnippet Format="1.0.0">
     <Header>
@@ -704,9 +710,11 @@
       </Code>
     </Snippet>
   </CodeSnippet>
-  <!-- _____________________________________________ Mvc Helper Snippets End _________________________________________ -->
+  <!-- _____________________________________________ Mvc Helper Snippets End
+  _________________________________________ -->
 
-  <!-- _____________________________________________ async Mvc Helper Snippets Start _________________________________________ -->
+  <!-- _____________________________________________ async Mvc Helper Snippets Start
+  _________________________________________ -->
 
   <!-- Mvc 5 Action Async  -->
   <CodeSnippet Format="1.0.0">
@@ -893,9 +901,11 @@
       </Code>
     </Snippet>
   </CodeSnippet>
-  <!-- _____________________________________________ async Mvc Helper Snippets End _________________________________________ -->
+  <!-- _____________________________________________ async Mvc Helper Snippets End
+  _________________________________________ -->
 
-  <!-- _____________________________________________ WebApi asp.net core Helper Snippets _________________________________________ -->
+  <!-- _____________________________________________ WebApi asp.net core Helper Snippets
+  _________________________________________ -->
 
   <!-- api 5 Action -->
   <CodeSnippet Format="1.0.0">
@@ -935,7 +945,7 @@
     <Header>
       <Title>apipostaction5</Title>
       <Shortcut>apipostaction5</Shortcut>
-      <Description>Code snippet for an .net core post  action via http post.</Description>
+      <Description>Code snippet for an .net core post action via http post.</Description>
       <Author>Lee Haisen</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -972,9 +982,433 @@
       </Code>
     </Snippet>
   </CodeSnippet>
-  <!-- _____________________________________________ WebApi asp.net core Helper Snippets End _________________________________________ -->
 
-  <!-- _____________________________________________ custom props Start _________________________________________ -->
+  <!-- API GET Action -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>API GET Action</Title>
+      <Shortcut>apiget</Shortcut>
+      <Description>Code snippet for an API GET action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>GetAction</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpGet]
+        public IActionResult $name$()
+        {
+            return Ok();$end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- API GET Async Action -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>API GET Async Action</Title>
+      <Shortcut>apigetasync</Shortcut>
+      <Description>Code snippet for an API GET async action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>GetActionAsync</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpGet]
+        public async Task<IActionResult> $name$()
+        {
+            return Ok();$end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- API POST Action -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>API POST Action</Title>
+      <Shortcut>apipost</Shortcut>
+      <Description>Code snippet for an API POST action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>PostAction</Default>
+        </Literal>
+        <Literal>
+          <ID>model</ID>
+          <ToolTip>Replace with the model type</ToolTip>
+          <Default>MyModel</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpPost]
+        public IActionResult $name$($model$ model)
+        {
+            return Ok(model);$end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- API POST Async Action -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>API POST Async Action</Title>
+      <Shortcut>apipostasync</Shortcut>
+      <Description>Code snippet for an API POST async action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>PostActionAsync</Default>
+        </Literal>
+        <Literal>
+          <ID>model</ID>
+          <ToolTip>Replace with the model type</ToolTip>
+          <Default>MyModel</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpPost]
+        public async Task<IActionResult> $name$($model$ model)
+        {
+            return Ok(model);$end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- API PUT Action -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>API PUT Action</Title>
+      <Shortcut>apiput</Shortcut>
+      <Description>Code snippet for an API PUT action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>PutAction</Default>
+        </Literal>
+        <Literal>
+          <ID>idType</ID>
+          <ToolTip>Replace with the ID type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>model</ID>
+          <ToolTip>Replace with the model type</ToolTip>
+          <Default>MyModel</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpPut]
+        public IActionResult $name$($idType$ id, $model$ model)
+        {
+            return Ok(model);$end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- API PUT Async Action -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>API PUT Async Action</Title>
+      <Shortcut>apiputasync</Shortcut>
+      <Description>Code snippet for an API PUT async action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>PutActionAsync</Default>
+        </Literal>
+        <Literal>
+          <ID>idType</ID>
+          <ToolTip>Replace with the ID type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>model</ID>
+          <ToolTip>Replace with the model type</ToolTip>
+          <Default>MyModel</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpPut]
+        public async Task<IActionResult> $name$($idType$ id, $model$ model)
+        {
+            return Ok(model);$end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- API DELETE Action -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>API DELETE Action</Title>
+      <Shortcut>apidelete</Shortcut>
+      <Description>Code snippet for an API DELETE action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>DeleteAction</Default>
+        </Literal>
+        <Literal>
+          <ID>idType</ID>
+          <ToolTip>Replace with the ID type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpDelete]
+        public IActionResult $name$($idType$ id)
+        {
+            return Ok();$end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- API DELETE Async Action -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>API DELETE Async Action</Title>
+      <Shortcut>apideleteasync</Shortcut>
+      <Description>Code snippet for an API DELETE async action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>DeleteActionAsync</Default>
+        </Literal>
+        <Literal>
+          <ID>idType</ID>
+          <ToolTip>Replace with the ID type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpDelete]
+        public async Task<IActionResult> $name$($idType$ id)
+        {
+            return Ok();$end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Expression Bodied Function for API GET -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Expression Bodied API GET</Title>
+      <Shortcut>ebapiget</Shortcut>
+      <Description>Code snippet for expression bodied API GET action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>GetAction</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpGet]
+        public IActionResult $name$() => Ok();$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Expression Bodied Function for API POST -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Expression Bodied API POST</Title>
+      <Shortcut>ebapipost</Shortcut>
+      <Description>Code snippet for expression bodied API POST action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>PostAction</Default>
+        </Literal>
+        <Literal>
+          <ID>model</ID>
+          <ToolTip>Replace with the model type</ToolTip>
+          <Default>MyModel</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpPost]
+        public IActionResult $name$($model$ model) => Ok(model);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Expression Bodied Function for API PUT -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Expression Bodied API PUT</Title>
+      <Shortcut>ebapiput</Shortcut>
+      <Description>Code snippet for expression bodied API PUT action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>PutAction</Default>
+        </Literal>
+        <Literal>
+          <ID>idType</ID>
+          <ToolTip>Replace with the ID type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>model</ID>
+          <ToolTip>Replace with the model type</ToolTip>
+          <Default>MyModel</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpPut]
+        public IActionResult $name$($idType$ id, $model$ model) => Ok(model);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Expression Bodied Function for API DELETE -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Expression Bodied API DELETE</Title>
+      <Shortcut>ebapidelete</Shortcut>
+      <Description>Code snippet for expression bodied API DELETE action in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>DeleteAction</Default>
+        </Literal>
+        <Literal>
+          <ID>idType</ID>
+          <ToolTip>Replace with the ID type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpDelete]
+        public IActionResult $name$($idType$ id) => Ok();$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- General API Action -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>General API Action</Title>
+      <Shortcut>apiaction</Shortcut>
+      <Description>Code snippet for a general API action in .NET Core with customizable HTTP attribute</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>httpAttribute</ID>
+          <ToolTip>Replace with the HTTP attribute (e.g., HttpGet, HttpPost)</ToolTip>
+          <Default>HttpGet</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>Action</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[$httpAttribute$]
+        public IActionResult $name$()
+        {
+            return Ok();$end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- General API Async Action -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>General API Async Action</Title>
+      <Shortcut>apiactionasync</Shortcut>
+      <Description>Code snippet for a general API async action in .NET Core with customizable HTTP attribute</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>httpAttribute</ID>
+          <ToolTip>Replace with the HTTP attribute (e.g., HttpGet, HttpPost)</ToolTip>
+          <Default>HttpGet</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>ActionAsync</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[$httpAttribute$]
+        public async Task<IActionResult> $name$()
+        {
+            return Ok();$end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- _____________________________________________ WebApi asp.net core Helper Snippets End
+  _________________________________________ -->
+
+  <!-- _____________________________________________ custom props Start
+  _________________________________________ -->
 
   <!-- Static auto prop -->
   <CodeSnippet Format="1.0.0">
@@ -1064,6 +1498,274 @@
     </Snippet>
   </CodeSnippet>
 
-  <!-- _____________________________________________ custom props End _________________________________________ -->
+  <!-- Readonly Field Snippet -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Readonly Field</Title>
+      <Shortcut>rof</Shortcut>
+      <Description>Code snippet for generating a readonly field</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type of the field</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>fieldName</ID>
+          <ToolTip>Name of the field</ToolTip>
+          <Default>_myField</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[private readonly $type$ $fieldName$;$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Readonly Field with Constructor Initialization -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Readonly Field with Constructor</Title>
+      <Shortcut>rofctor</Shortcut>
+      <Description>Code snippet for generating a readonly field with constructor initialization</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type of the field</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>fieldName</ID>
+          <ToolTip>Name of the field</ToolTip>
+          <Default>_myField</Default>
+        </Literal>
+        <Literal>
+          <ID>paramName</ID>
+          <ToolTip>Name of the constructor parameter</ToolTip>
+          <Default>myField</Default>
+        </Literal>
+        <Literal>
+          <ID>className</ID>
+          <ToolTip>Name of the class</ToolTip>
+          <Default>MyClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[private readonly $type$ $fieldName$;
+
+        public $className$($type$ $paramName$)
+        {
+            $fieldName$ = $paramName$;
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <!-- _____________________________________________ custom props End
+  _________________________________________ -->
+
+  <!-- _____________________________________________ .NET Core Snippets
+  _________________________________________ -->
+
+  <!-- Default Function for .NET Core -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Default Function .NET Core</Title>
+      <Shortcut>dfcore</Shortcut>
+      <Description>Code snippet for default function in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessor</ID>
+          <ToolTip>Access level of the method</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of the function</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>argType</ID>
+          <ToolTip>Type of the argument</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>argName</ID>
+          <ToolTip>Name of the argument</ToolTip>
+          <Default>argName</Default>
+        </Literal>
+        <Literal>
+          <ID>funcName</ID>
+          <ToolTip>Name of the function</ToolTip>
+          <Default>GeneralMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessor$ $retType$ $funcName$($argType$ $argName$)
+        {
+            $selected$ $end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Primary Constructor for .NET Core -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Primary Constructor</Title>
+      <Shortcut>ctorp</Shortcut>
+      <Description>Code snippet for primary constructor in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>classname</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>ClassName</Default>
+        </Literal>
+        <Literal>
+          <ID>parameters</ID>
+          <ToolTip>Constructor parameters</ToolTip>
+          <Default>int id, string name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public record $classname$($parameters$);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Expression Bodied Function for .NET Core -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Expression Bodied Function .NET Core</Title>
+      <Shortcut>ebfcore</Shortcut>
+      <Description>Code snippet for expression bodied function in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessor</ID>
+          <ToolTip>Access level of the method</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of the function</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>argType</ID>
+          <ToolTip>Type of the argument</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>argName</ID>
+          <ToolTip>Name of the argument</ToolTip>
+          <Default>argName</Default>
+        </Literal>
+        <Literal>
+          <ID>funcName</ID>
+          <ToolTip>Name of the function</ToolTip>
+          <Default>Method</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessor$ $retType$ $funcName$($argType$ $argName$) => $selected$; $end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Constructor with Dependency Injection for .NET Core -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Constructor with Dependency Injection .NET Core</Title>
+      <Shortcut>ctordcore</Shortcut>
+      <Description>Code snippet for constructor with Dependency Injection in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>classname</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>ClassName</Default>
+        </Literal>
+        <Literal>
+          <ID>dependencyType</ID>
+          <ToolTip>Type of the injected dependency</ToolTip>
+          <Default>IMyService</Default>
+        </Literal>
+        <Literal>
+          <ID>dependencyName</ID>
+          <ToolTip>Name of the injected dependency</ToolTip>
+          <Default>myService</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[private readonly $dependencyType$ _$dependencyName$;
+
+        public $classname$($dependencyType$ $dependencyName$)
+        {
+            _$dependencyName$ = $dependencyName$;
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Static Expression Bodied Function for .NET Core -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Static Expression Bodied Function .NET Core</Title>
+      <Shortcut>sebcore</Shortcut>
+      <Description>Code snippet for static expression bodied function in .NET Core</Description>
+      <Author>Lee Haisen</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessor</ID>
+          <ToolTip>Access level of the method</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>retType</ID>
+          <ToolTip>Return Type of the function</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>argType</ID>
+          <ToolTip>Type of the argument</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>argName</ID>
+          <ToolTip>Name of the argument</ToolTip>
+          <Default>argName</Default>
+        </Literal>
+        <Literal>
+          <ID>funcName</ID>
+          <ToolTip>Name of the function</ToolTip>
+          <Default>Method</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessor$ static $retType$ $funcName$($argType$ $argName$) => $selected$; $end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- _____________________________________________ .NET Core Snippets End
+  _________________________________________ -->
 
 </CodeSnippets>
