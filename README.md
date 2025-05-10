@@ -1,68 +1,79 @@
 # Installation
+
 1. Download the snippets file.
-2. Open Visual Studio
-3. Press Ctrl + K, Ctrl + B
-4. Import Snippits
-5. Add & save
-----------------------------
-# MVC Helping Shortcuts
-mvcaction4<br />
-mvcactionpost4<br />
+2. Open Visual Studio.
+3. Press `Ctrl + K, Ctrl + B`.
+4. Import Snippets.
+5. Add and save.
 
-mvcaction5<br />
-mvcactionpost5<br />
+---
 
-mvcaction5async<br />
-mvcactionpost5async<br />
+## MVC Helping Shortcuts
 
-# Web Api Snippets
- apiaction5<br />
- apipostaction5<br />
+- `mvcaction4`: MVC 4 action
+- `mvcpostaction4`: MVC 4 post action
+- `mvcaction5`: MVC 5 action
+- `mvcpostaction5`: MVC 5 post action
+- `mvcaction5async`: MVC 5 async action
+- `mvcpostaction5async`: MVC 5 async post action
 
-# Action Pairs
+## Web API Snippets
 
-actions4<br />
-actions5<br />
+- `apiget`: API GET action
+- `apigetasync`: API GET async action
+- `apipost`: API POST action
+- `apipostasync`: API POST async action
+- `apiput`: API PUT action
+- `apiputasync`: API PUT async action
+- `apidelete`: API DELETE action
+- `apideleteasync`: API DELETE async action
+- `ebapiget`: Expression bodied API GET action
+- `ebapipost`: Expression bodied API POST action
+- `ebapiput`: Expression bodied API PUT action
+- `ebapidelete`: Expression bodied API DELETE action
+- `apiaction`: General API action
+- `apiactionasync`: General API async action
 
-actions4async<br />
-actions5async<br />
+## Action Pairs
 
+- `actions4`: MVC 4 action pair
+- `actions5`: MVC 5 action pair
+- `actions4async`: MVC 4 async action pair
+- `actions5async`: MVC 5 async action pair
 
+## Property Shortcuts
 
-# Property shortcuts
+- `propc`: Constant property
+- `props`: Static property
+- `propr`: Readonly property
 
-propc // constant property<br />
-props // static property<br />
-propr // readonly property<br />
+## Function Shortcuts
 
-# Function shortcuts
+- `df`: Default function
+- `dpf`: Default parameterless function
 
-df // default function<br />
-dpf // default function with a param<br />
+## Static Functions
 
-# Static functions 
+- `sdf`: Static default function
+- `sdpf`: Static default parameterless function
 
-sdf <br />
-sdpf<br />
+## Expression Bodied Functions
 
-# Expression bodied functions
+- `ebf`: Expression bodied function
+- `ebpf`: Expression bodied parameterless function
 
-ebf<br />
-ebpf<br />
+## Static Expression Bodied Functions
 
-# Static  expression bodied functions
+- `sebf`: Static expression bodied function
+- `sebpf`: Static expression bodied parameterless function
 
-sebf<br />
-sebpf<br />
+## Constructor & Class Shortcuts
 
-# Constructor & class shortcuts
+- `ctord`: Constructor with dependency injection
+- `sclass`: Static class
 
-ctord // for dependency injection in constructor<br />
-sclass // static class<br />
+## Console Snippets
 
-
-# Console shippets
-
-cr // console read<br />
-crk // console read key<br />
-crl // console read line<br />
+- `cr`: Console read
+- `crk`: Console read key
+- `crl`: Console read line
